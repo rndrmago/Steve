@@ -463,6 +463,7 @@ function build() {
       a(522, 542, lo, hi, 1.5, DT);                                           // 바깥 수평판
       a(522, 542, lo2, hi2, 1.5, DT);                                         // 안쪽 수평판
       const za = Math.min(hi, hi2), zb = Math.max(lo, lo2);
+      if (z0 > 500) continue;                                                 // 상단 엔드캡: 앞판·측벽 제거 (요청)
       a(522, 542, za, zb, 1.5, 3);                                            // 앞판 (도어 앞면에서 1.5 뒤)
       a(540.5, 542, za, zb, 3, DT - 1.5);                                     // 측벽
     }
